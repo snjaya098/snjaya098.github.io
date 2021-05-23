@@ -1,0 +1,187 @@
+/*Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab1
+UI Survey - Style Sheet*/
+
+/*To contain and center things*/
+.container {
+  position: relative;
+}
+
+/*Center in General*/
+.center1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+/*Left Align certain portions*/
+.leftalign {
+  position: absolute;
+  text-align: left; 
+}
+
+/*Space background image*/
+html {
+  background: url('Images/stars3.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
+/*Space Font for the heading*/
+@font-face {
+   font-family: myFont;
+   src: url('Images/SpaceAge.ttf');
+}
+h1 {
+  font-family: myFont;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+/*Box 1 code for the links*/
+#rcorners1 {
+  border-radius: 25px;
+  background: #000000;
+  border: 5px solid #F8F8FF;
+  padding: 20px; 
+  width: 900px;
+  height: 420px;  
+  color: #F8F8FF;
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*Box 2 code for the paragraph*/
+#rcorners2 {
+  border-radius: 25px;
+  background: #000000;
+  border: 5px solid #F8F8FF;
+  padding: 20px; 
+  width: 900px;
+  height: 80px;  
+  color: #F8F8FF;
+  margin-bottom: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*Button to access form*/
+.open-button {
+border-radius: 25px;
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  margin: auto;
+font-family: "Courier New", Courier, monospace;
+color: black;
+font-weight: bold;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: absolute;
+  bottom: 110px;
+  right: 740px;
+  z-index: 9;
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/*Structure the form (columns/rows/align question with answer)*/
+table {
+  width: 200%;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  border-radius: 25px;
+  background: #000000;
+  border: 5px solid #F8F8FF;
+  height:105%;
+  width:190%;
+  background-color: #000000;
+  padding: 12px;
+font-family: "Courier New", Courier, monospace;
+color: #F8F8FF;
+}
+
+/* Full-width input fields */
+input[type=text], select, textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+border-radius: 25px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  margin-bottom:10px;
+  opacity: 0.8;
+font-family: "Courier New", Courier, monospace;
+color: #F8F8FF;
+font-weight: bold;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/*Footer styles*/
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #292929;
+  color: white;
+}
