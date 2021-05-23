@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Solar Space UI Questionnaire</title>
+<title>Solar Space UI Survey</title>
 <style>
 
 /*To contain and center things*/
@@ -9,11 +9,18 @@
   position: relative;
 }
 
+/*Center in General*/
 .center1 {
   position: absolute;
   top: 50%;
   width: 100%;
   text-align: center;
+}
+
+/*Left Align certain portions*/
+.leftalign {
+  position: absolute;
+  text-align: left; 
 }
 
 /*Space background image*/
@@ -62,7 +69,7 @@ h1 {
   font-family: "Courier New", Courier, monospace;
 }
 
-/*Form pop up stuff*/
+/*Button to access form*/
 .open-button {
 border-radius: 25px;
   background-color: white;
@@ -87,6 +94,31 @@ font-weight: bold;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
+
+/*Structure the form (columns/rows/align question with answer)*/
+table {
+  width: 200%;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
 
 /* Add styles to the form container */
 .form-container {
@@ -137,51 +169,17 @@ font-weight: bold;
   opacity: 1;
 }
 
-/*Put the field and question in columns*/
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-.center2 {
-  position: absolute;
-  text-align: left;
-  
-}
-
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
   to {opacity: 1;}
 }
-
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
-table {
-  width: 200%;
 
-}
-
+/*Foot styles*/
 footer {
   text-align: center;
   padding: 3px;
@@ -198,6 +196,7 @@ footer {
 <div class="container">
 <div class="center1">
 <h1>SOLAR SYSTEM SCOPE: UI SURVEY</h1>
+
 <p id="rcorners1">
 <a href="https://www.solarsystemscope.com/">
 <img src="web_image.png" alt="Solar System Scope" style="width:900px;height:400px;">
@@ -211,7 +210,6 @@ Welcome! This webpage contains a user interface survey about the Solar System Sc
 Model. Please click the "Open Form" button to access the survey. If you would like to
 acccess the Solar System Scope model, please click on the link or the image in the box above!
 <br>
-
 <button class="open-button" onclick="openForm()">Open Form</button>
 </p>
 
@@ -219,8 +217,7 @@ acccess the Solar System Scope model, please click on the link or the image in t
 <form action="/action_page.php" class="form-container">
 <p>Please answer the following questions</p>
 <br>
-
-<div class="row">
+  <div class="row">
     <div class="col-25">
       <label for="fname">Please describe your expreience with the Solar System Scope in a few words</label>
     </div>
@@ -230,24 +227,24 @@ acccess the Solar System Scope model, please click on the link or the image in t
   </div>
 <br>
 
-<div class="row">
+  <div class="row">
     <div class="col-25">
       <label>Please rate the website:</label>
     </div>
     <div class="col-75">
-      <div class="center2">
+     <div class="leftalign">
       <table>
         <tr>
-        <td><input type = "radio" name = "rate" value="exe">Excellent</td>
-	<td><input type = "radio" name = "rate" value="good" >Good</td>
-        <td><input type = "radio" name = "rate" value="neutral">Neutral</td>
-	<td><input type = "radio" name = "rate" value="bad">Bad</td>
-        <td><input type = "radio" name = "rate" value="terrible">Terrible</td>
-</tr>
-</table>
+          <td><input type = "radio" name = "rate" value="exe">Excellent</td>
+	  <td><input type = "radio" name = "rate" value="good" >Good</td>
+          <td><input type = "radio" name = "rate" value="neutral">Neutral</td>
+	  <td><input type = "radio" name = "rate" value="bad">Bad</td>
+          <td><input type = "radio" name = "rate" value="terrible">Terrible</td>
+        </tr>
+      </table>
+     </div>
     </div>
-  </div>
-</div>
+   </div>
 <br>
 
 <div class="row">
@@ -255,14 +252,14 @@ acccess the Solar System Scope model, please click on the link or the image in t
       <label>What to you like about the model? Check all that apply</label>
     </div>
     <div class="col-75">
-    <div class="center2">
+    <div class="leftalign">
     <table>
       <tr><td><input type = "checkbox" name = "easy" value="Easy">Easy to Use</td>
       <td><input type = "checkbox" name = "pretty" value="Pretty">Nice design</td>
       <td><input type = "checkbox" name = "info" value="Info">Very informative</td>
       <td><input type = "checkbox" name = "useful" value="Info">Useful/Applicable</td>
       <td><input type = "checkbox" name = "fun" value="Info">Fun</td></tr>
-</table>
+    </table>
     </div>
  </div>
 </div>
@@ -307,10 +304,10 @@ function closeForm() {
 }
 </script>
 
-
 <footer>
   <p>Website Designed by: S.N.Jay</p>
 </footer>
+
 </div>
 </div>
 
