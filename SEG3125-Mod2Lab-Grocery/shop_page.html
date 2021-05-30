@@ -1,0 +1,73 @@
+<!-- 
+Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab2
+Grocery Store Shop Page- html code
+
+Created using tutorials/inspiration from sources:
+https://www.w3schools.com/html/default.asp 
+Barriere, C (2021) SEG3125-Module2-Grocery [Source code] 
+https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="style.css" rel="stylesheet" type="text/css">
+<title>Bel-Rose Foods</title>
+</head>
+
+<body class="shop">
+
+<h1>( Bel-Rose Foods )</h1>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	<p>Choose a Category:</p>
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Lactose-Intolerant">Lactose-Intolerant</option>
+        <option value="Nut-Allergy">Nut-Allergy</option>
+        <option value="Organic">Organic</option>
+        <option value="Lactose-Intolerant & Nut-Allergy">Lactose-Intolerant & Nut-Allergy</option>
+        <option value="Lactose-Intolerant & Organic">Lactose-Intolerant & Organic</option>
+        <option value="Nut-Allergy & Organic">Nut-Allergy & Organic</option>
+        <option value="Lactose-Intolerant & Nut-Allergy & Organic">Lactose-Intolerant, Nut-Allergy & Organic</option>      
+        <option value="No Preference">No Preference</option>
+	</select>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 <p>Choose items to buy, then click the "Add to Cart" button.</p>
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">Add to cart.</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+  <p>Thank you for shopping at Bel Rose Foods!</p>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<footer>
+  <p>Website Designed by: S.N.Jay</p>
+</footer>
+
+</body>
+</html>
