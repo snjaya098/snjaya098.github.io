@@ -24,6 +24,7 @@ body.home {
   background-size: cover;
 }
 
+/*Background Image for Shop Page*/
 body.shop {
   background: url('Images/food_back.jpg') no-repeat center fixed;
   background-size: cover;
@@ -42,16 +43,18 @@ h1 {
   text-align: center;
 }
 
-/*Font style for shopping page text*/
+/*Font style for other text*/
 @font-face {
    font-family: myFont2;
    src: url('Images/GroceryRounded.ttf');
 }
+/*Text for shopping page*/
 p {
   font-family: myFont2;
   font-size: 20px;
   color: white;
 }
+/*Text for main page*/
 p1 {
   font-family: myFont2;
   font-size: 30px;
@@ -88,7 +91,7 @@ p1 {
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #533621;
-color: white;
+  color: white;
 }
 
 /* Style the tab content */
@@ -104,7 +107,7 @@ color: white;
 
 }
 
-/*Button to access shop*/
+/*Button to access shop page*/
 .shop-button {
   border-radius: 25px;
   background-color: white;
@@ -117,6 +120,8 @@ color: white;
   font-weight: bold;
   font-size: 20px;
 }
+
+/*Button to access about page - not active*/
 .about-button {
 border-radius: 25px;
   background-color: white;
@@ -130,6 +135,7 @@ border-radius: 25px;
   font-size: 20px;
 }
 
+/*Button to access contact page - not active*/
 .contact-button {
 border-radius: 25px;
   background-color: white;
@@ -145,13 +151,12 @@ border-radius: 25px;
 
 /*Footer styles*/
 footer {
-  text-align: center;
+  text-align: right;
   padding: 3px;
   background-color: #292929;
   color: white;
   position: fixed;
-  left: 0;
+  right: 0.5px;
   bottom: 0;
   height: 50px;
-  width: 100%;
 }

@@ -8,7 +8,7 @@ This Folder consists of the following files:
 2) store_page.html: the shopping page where users can shop
 3) style.css: the css file containing all the styles of the website
 4) Scripts Fodler: contains the files groceries.js and main.js and are responsible for the functionality of the store website
-5) Images Folder: includes the images used in the website
+) Images Folder: includes the images used in the website
 
 
 This website was created using tutorials/inspiration from the following sources:
