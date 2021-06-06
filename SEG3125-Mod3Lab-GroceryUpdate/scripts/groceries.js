@@ -1,6 +1,18 @@
+/*Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab3
+Grocery Store Upgrade - Grocery List
+
+Created using tutorials/inspiration from source:
+https://www.w3schools.com/js/default.asp
+Barriere, C (2021) SEG3125-Module2-Grocery [Source code] 
+https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery
+*/
+
+// Array of products, each product is an object with different fieldset
 var products = [
 	{
-		name: "bread",
+		name: "1 Loaf Bread",
 		lactoseFree: false,
 		nutFree: true,
 		organic: true,
@@ -10,7 +22,7 @@ var products = [
 		category: "grain"
 	},
 	{
-		name: "pasta",
+		name: "Fettuccine Pasta (900g)",
 		lactoseFree: true,
 		nutFree: true,
 		organic: false,
@@ -20,7 +32,7 @@ var products = [
 		category: "grain"
 	},
 	{
-		name: "avacodo (organic)",
+		name: "1 Organic Avacodo",
 		lactoseFree: true,
 		nutFree: false,
 		organic: true,
@@ -30,7 +42,7 @@ var products = [
 		category: "fruit"
 	},
 	{
-		name: "banana (organic)",
+		name: "1 Organic Banana ",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -40,7 +52,7 @@ var products = [
 		category: "fruit"
 	},
 		{
-		name: "tomato (organic)",
+		name: "1 Organic Tomato ",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -50,7 +62,7 @@ var products = [
 		category: "fruit"
 	},
 	{
-		name: "cucumber (organic)",
+		name: "1 Organic Cucumber",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -60,7 +72,7 @@ var products = [
 		category: "fruit"
 	},
 	{
-		name: "cheese",
+		name: "Cheddar Cheese (400g)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: false,
@@ -70,7 +82,7 @@ var products = [
 		category: "dairy"
 	},
 	{
-		name: "milk 2%",
+		name: "Milk 2% (4L)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: false,
@@ -80,7 +92,7 @@ var products = [
 		category: "dairy"
 	},
 	{
-		name: "yogurt (organic)",
+		name: "Organic Yogurt (750g)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: true,
@@ -90,7 +102,7 @@ var products = [
 		category: "dairy"
 	},
 	{
-		name: "dozen eggs",
+		name: "Dozen White Eggs",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -100,17 +112,17 @@ var products = [
 		category: "meat"
 	},
 	{
-		name: "salmon",
+		name: "1 Salmon Fillet",
 		lactoseFree: true,
 		nutFree: true,
 		organic: false,
 		vegan: false,
-		price: 21.55,
+		price: 16.55,
 		img: "Images/salmon.jpg",
 		category:"meat"
 	},
 	{
-		name: "chicken",
+		name: "1 Whole Chicken",
 		lactoseFree: true,
 		nutFree: true,
 		organic: false,
@@ -120,7 +132,7 @@ var products = [
 		category:"meat"
 	},
 	{
-		name: "almond milk",
+		name: "Almond Milk (950ml)",
 		lactoseFree: true,
 		nutFree: false,
 		organic: true,
@@ -130,7 +142,7 @@ var products = [
 		category: "vegan"
 	},
 	{
-		name: "tofu",
+		name: "Tofu (350g)",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -140,7 +152,7 @@ var products = [
 		category: "vegan"
 	},
 	{
-		name: "plant based-burger",
+		name: "Plant-Based Burger (20g)",
 		lactoseFree: true,
 		nutFree: true,
 		organic: true,
@@ -150,7 +162,7 @@ var products = [
 		category: "vegan"
 	},
 	{
-		name: "Coca-Cola (peach - \u30d4 \u30fc \u30c1)",
+		name: "Coca-Cola Peach/ \u30d4\u30fc\u30c1 (250ml)",
 		lactoseFree: true,
 		nutFree: true,
 		organic: false,
@@ -160,7 +172,7 @@ var products = [
 		category: "international"
 	},
 	{
-		name: "Kit-Kat Variety Pack ( \u30ad \u30c3 \u30c8 \u30ab \u30c3 \u30c8 )",
+		name: "Kit-Kat Variety Pack 12/ \u30ad\u30c3\u30c8 \u30ab\u30c3\u30c8 12",
 		lactoseFree: false,
 		nutFree: false,
 		organic: false,
@@ -170,7 +182,7 @@ var products = [
 		category: "international"
 	},
 	{
-		name: "Pretz ( \u30d7 \u30ea \u30c3 \u30c4 )",
+		name: "Pretz/ \u30d7\u30ea\u30c3\u30c4 (2 pack)",
 		lactoseFree: true,
 		nutFree: false,
 		organic: false,
@@ -180,37 +192,37 @@ var products = [
 		category: "international"
 	},
 	{
-		name: "Umaibo ( \u3046 \u307e \u3044 )",
+		name: "Umaibo Snack/ \u3046\u307e\u3044 ",
 		lactoseFree: true,
 		nutFree: true,
 		organic: false,
 		vegan: true,
-		price: 3.43,
+		price: 1.43,
 		img: "Images/umaibo.jpg",
 		category: "international"
 	},
 	{
-		name: "Shin Ramyun noodles ( \uc2e0 \ub77c \uba74 )",
+		name: "Shin Ramyun noodles/ \uc2e0\ub77c\uba74 (4 pack)",
 		lactoseFree: true,
 		nutFree: true,
 		organic: false,
 		vegan: false,
-		price: 0.75,
+		price: 5.75,
 		img: "Images/ramen.jpg",
 		category: "international"
 	},
 	{
-		name: "kimchi ( \uae40 \uce58 )",
+		name: "Kimchi/ \uae40\uce58 (750g)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: false,
 		vegan: true,
-		price: 12.89,
+		price: 9.89,
 		img: "Images/kimchi.jpg",
 		category: "international"
 	},
 	{
-		name: "butter chicken sauce",
+		name: "Butter Chicken Sauce (400ml)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: false,
@@ -220,7 +232,7 @@ var products = [
 		category: "international"
 	},
 	{
-		name: "tikka masala mix",
+		name: "Tikka Masala Mix (285g)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: false,
@@ -230,7 +242,7 @@ var products = [
 		category: "international"
 	},
 	{
-		name: "falafel",
+		name: "Falafel Mix (150g)",
 		lactoseFree: false,
 		nutFree: true,
 		organic: false,

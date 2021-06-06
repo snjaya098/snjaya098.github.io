@@ -1,3 +1,17 @@
+/*Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab3 
+Grocery Store Upgrade - Main JS File
+
+Created using tutorials/inspiration from source:
+https://www.w3schools.com/js/default.asp
+Barriere, C (2021) SEG3125-Module2-Grocery [Source code] 
+https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery
+*/
+
+// This function is called when any of the tab is clicked
+// It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
+
 function openInfo(evt, tabName) {
 
 	// Get all elements with class="tabcontent" and hide them
@@ -17,23 +31,24 @@ function openInfo(evt, tabName) {
 	evt.currentTarget.className += " active";
 
 }
+//This script is taken from https://www.w3schools.com/howto/howto_js_accordion.asp
 var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                console.log(panel);
-                if (panel.style.display === "flex") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "flex";
-                }
-            });
+var i;
+for (var i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        console.log(panel);
+        if (panel.style.display === "flex") {
+            panel.style.display = "none";
+        }else{
+        	panel.style.display = "flex";
         }
+    });
+}
+
 // Function that handles Customer preferences
-function prefFunction() {
+function prefCustomer() {
 	var w = document.getElementById("Lactose-Intolerant").checked;
 	var x = document.getElementById("Nut-Allergy").checked;
 	var y = document.getElementById("Vegan").checked;
@@ -89,9 +104,6 @@ function prefFunction() {
 	}
 }
 
-// In case no dietary options is selected sets default to none
-//prefFunction()
-
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
@@ -103,17 +115,20 @@ function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, sl
     var s5 = document.getElementById(slct5);
     var s6 = document.getElementById(slct6);
     var s7 = document.getElementById(slct7);
-	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
+
+	// s2-s7 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
     s3.innerHTML = "";
     s4.innerHTML = "";
     s5.innerHTML = "";
     s6.innerHTML = "";
     s7.innerHTML = "";
+
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1);
+
     // Line below adapted from https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_sort_object1
-		optionArray.sort(function(a,b) {return a.price - b.price});
+    optionArray.sort(function(a,b) {return a.price - b.price});
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -123,7 +138,7 @@ function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, sl
 			
 		var productName = optionArray[i];
 		var image = productName.img;
-		//var productPrice = optionArray[i+=1];
+
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
@@ -140,8 +155,8 @@ function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, sl
 		var label = document.createElement('label')
 		label.htmlFor = productName.name;
 		label.appendChild(document.createTextNode(productName.name + " $ " + productName.price));
+
 		//Checks what section of accordion structure product should go into
-		
 		if(productName.category === 'grain') {
 			s2.appendChild(document.createElement("br"));
 			s2.appendChild(checkbox);
