@@ -34,6 +34,8 @@ https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG31
     border-style: solid;
     outline: none;
     transition: 0.4s;
+    font-family:myFont2;
+    font-size: 18px;
 }
 /* Add a background color to the button if it is clicked on/hover*/
 .active,
