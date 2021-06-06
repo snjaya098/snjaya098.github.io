@@ -1,0 +1,236 @@
+<!-- 
+Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab3
+Grocery Store Upgrade Shop Page- html code
+
+Created using tutorials/inspiration from sources:
+https://www.w3schools.com/html/default.asp 
+Barriere, C (2021) SEG3125-Module2-Grocery [Source code] 
+https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="style.css" rel="stylesheet" type="text/css">
+<title>Bel-Rose Foods</title>
+</head>
+
+<body class="shop">
+
+<h1>( Bel-Rose Foods )</h1>
+
+<div class="sidenav">
+  <p1 style="text-align:center;">Quick Links</p1>
+  <p><a href="#about">About Us</a></p>
+  <p><a href="#shop">Shop Here</a></p>
+  <p><a href="#faq">FAQ</a></p>
+  <p><a href="#contact">Contact Us</a></p>
+  <p style="padding:350px 0 0;"><a href="index.html">Return to Main Page</a></p>
+</div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab" style="width:50%;">
+  <button class="tablinks"  onclick="openInfo(event, 'Client')">Step 1: Client Information </button>
+  <button class="tablinks"  onclick="openInfo(event, 'Products')">Step 2: Products</button>
+  <button class="tablinks"  onclick="openInfo(event, 'Cart')">Step 3: Cart Checkout</button>
+  <button class="tablinks"  onclick="openInfo(event, 'Exit')">Exit</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent" style="width:50%;">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	<p>Choose a Category:</p>
+<br>
+	<input type="checkbox" id="Lactose-Intolerant" name="lactoseFree" value="lactoseFree">
+        <label for="Lactose-Intolerant">Lactose-Intolerant</label><br>
+
+        <input type="checkbox" id="Nut-Allergy" name="nutFree" value="nutFree">
+        <label for="Nut-Allergy">Nut-Allergy</label><br>
+
+        <input type="checkbox" id="Vegan" name="vegan" value="vegan">
+        <label for="Vegan">Vegan</label><br>
+
+        <input type="checkbox" id="Organic" name="organic" value="organic">
+        <label for="Organic">Organic</label><br>
+
+        <input type="checkbox" id="No Preference" name="noPreference" value="noPreference">
+        <label for="No Preference">No Preference</label><br>
+<br>
+<button class="page-button" onclick="prefFunction()">Update Preference</button>
+</div>
+
+<div id="Products" class="tabcontent" style="width:50%;">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+  <p>Choose items to buy, then click the "Add to Cart" button.</p>
+  <div id="displayProduct"></div>
+  
+  <button class="accordion">Grains</button>
+      <div class="panel">
+         <div id="displayGrain"></div>
+      </div>
+      <br>
+
+      <button class="accordion">Fruits and Vegetables</button>
+      <div class="panel">
+         <div id="displayFruit"></div>
+      </div>
+      <br>
+
+      <button class="accordion">Dairy Products</button>
+      <div class="panel">
+         <div id="displayDairy"></div>
+      </div>
+        <br>    
+      <button class="accordion">Meat and Other Alternatives</button>
+      <div class="panel">
+         <div id="displayMeat"></div>
+      </div>
+          <br> 
+      <button class="accordion">Meat/Dairy Alternatives</button>
+      <div class="panel">
+         <div id="displayAlt"></div>
+      </div>
+          <br> 
+      <button class="accordion">International</button>
+      <div class="panel">
+         <div id="displayInt"></div>
+      </div>
+<br>
+<br>
+<button id="addCart" type="button" class="page-button" onclick="openInfo(event, 'Cart'); selectedItems()">Add to cart.</button>
+ 
+</div>
+
+<div id="Cart" class="tabcontent" style="width:50%;">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+  <br>
+  <div class="row">
+    <div class="container-payment">
+      <form action="/action_page.php">
+            <h3 style="color:black;">Payment</h3>
+            <div class="col-20">
+            <label for="cardacpt" style= "color: black;">Accepted Cards</label>
+            </div>
+            <div class="col-80">
+            <img src="Images/cardsAccept.jpg" style="width:100px; height:25px;">
+            </div>
+             <br>
+            <div class="col-20">
+            <label for="cname" style= "color: black;">Name on Card</label>
+            </div>
+            <div class="col-80">
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            </div>
+            <br>
+            <div class="col-20">
+            <label for="cname" style= "color: black;">Card Number</label>
+            </div>
+            <div class="col-80">
+            <input type="text" id="cname" name="cardname" placeholder="1111-2222-3333-4444">
+            </div>
+            <br>
+            <div class="col-20">
+            <label for="cname" style= "color: black;">Expiry Date</label>
+            </div>
+            <div class="col-80">
+            <input type="text" id="cname" name="cardname" placeholder="MM/YYYY">
+            </div>
+            <br>
+            <div class="col-20">
+            <label for="cname" style= "color: black;">CVC</label>
+            </div>
+            <div class="col-80">
+            <input type="text" id="cname" name="cardname" placeholder="123">
+            </div>
+            <br>
+      </form>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="container-delivery">
+       <form action="/action_page.php">
+            <h3 style="color:black;">Delivery</h3>
+            <div class="col-25">
+            <label for="cname" style= "color: black;">Address Line 1</label>
+            </div>
+            <div class="col-75">
+            <input type="text" id="address" name="address" placeholder="212 Baker Street">
+            </div>
+            <br>
+            <div class="col-25">
+            <label for="cname" style= "color: black;">City</label>
+            </div>
+            <div class="col-75">
+            <input type="text" id="city" name="city" placeholder="Toronto">
+            </div>
+            <br>
+            <div class="col-25">
+            <label for="cname" style= "color: black;">Province/Territory</label>
+            </div>
+            <div class="col-75">
+            <select name = "province">
+	       <option value="BC" selected="selected">British Columbia</option>
+               <option value="AB">Alberta</option>
+               <option value="SK">Saskatchewan</option>
+	       <option value="MB">Manitoba</option>
+	       <option value="ON">Ontario</option>
+               <option value="QC">Quebec</option>
+               <option value="NB">New Brunswick</option>
+               <option value="NS">Nova Scotia</option>
+               <option value="PEI">P.E.I</option>
+               <option value="NL">Newfoundland</option>
+            </select>
+            </div>
+            <br>
+            <div class="col-25">
+            <label for="cname" style= "color: black;">Postal Code</label>
+            </div>
+            <div class="col-75">
+            <input type="text" id="postal" name="postal" placeholder="A1A 1A1">
+            </div>
+            <br>
+            <div class="col-25">
+            <label for="cname" style= "color: black;">Delivery Time</label>
+            </div>
+            <div class="col-75">
+            <select name = "time">
+	       <option value="three" selected="selected">3:00 PM</option>
+               <option value="four">4:00 PM</option>
+               <option value="five">5:00 PM</option>
+	       <option value="six">6:00 PM</option>
+	       <option value="seven">7:00 PM</option>
+               <option value="eight">8:00 PM</option>
+               <option value="nine">9:00 PM</option>
+            </select>
+            </div>
+            <br>
+      </form>
+    </div>
+  </div>
+<br>
+<button class="page-button" onclick="openInfo(event, 'Exit')">Purchase/Checkout</button>
+</div>
+</div>
+
+<div id="Exit" class="tabcontent" style="width:50%;">
+  <h3>Purchased!</h3>
+  <p>Thank you for shopping at Bel Rose Foods! We hope to see you soon!</p>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<footer>
+  <p>Website Designed by: S.N.Jay</p>
+</footer>
+
+</body>
+</html>

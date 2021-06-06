@@ -1,0 +1,313 @@
+/*Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab3 
+Grocery Store Upgrade- Style Sheet
+
+Created using tutorials/inspiration from source:
+https://www.w3schools.com/css/default.asp
+https://www.w3schools.com/howto/howto_js_tabs.asp
+https://www.w3schools.com/howto/howto_js_accordion.asp
+https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+https://www.w3schools.com/howto/howto_css_checkout_form.asp
+Barriere, C (2021) SEG3125-Module2-Grocery [Source code] 
+https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery
+*/
+
+/*Center text in Main Page*/
+.center1 {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border-width: 1px 1px 0 1px;
+    border-color: lightgray;
+    border-style: solid;
+    outline: none;
+    transition: 0.4s;
+}
+/* Add a background color to the button if it is clicked on/hover*/
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: #533621;
+    display: none;
+    overflow: hidden;
+}
+.accordion:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+.accordion.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+/*Background Image for Main Page*/
+body.home {
+  background: url('Images/food_back_main.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
+/*Background Image for Shop Page*/
+body.shop {
+  background: url('Images/food_back.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
+/*Font Style for Store Name*/
+@font-face {
+   font-family: myFont;
+   src: url('Images/Babalu.ttf');
+}
+h1 {
+  font-family: myFont;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/*Font style for shopping page text*/
+@font-face {
+   font-family: myFont2;
+   src: url('Images/GroceryRounded.ttf');
+}
+p {
+  font-family: myFont2;
+  font-size: 20px;
+  color: white;
+}
+p1 {
+  font-family: myFont2;
+  font-size: 30px;
+  color: white;
+}
+
+/*Side bar Styles*/
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-family: myFont2;
+  font-size: 20px;
+  color: black;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #533621;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color:#533621;
+  font-family: myFont2;
+  font-size: 20px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Image for Food*/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/*Button to access shop*/
+.shop-button {
+  border-radius: 25px;
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  font-family: myFont2;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+/*Button to about page and faq*/
+.about-button {
+border-radius: 25px;
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  font-family: myFont2;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*Button to contact page*/
+.contact-button {
+border-radius: 25px;
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  font-family: myFont2;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*Buttons on Shopping Page*/
+.page-button {
+border-radius: 25px;
+  background-color: white;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  font-family: myFont2;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* The payment and delivery form*/
+* {
+  box-sizing: border-box;
+}
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+.col-25{
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-80 {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container-payment{
+  background-color: #f2f2f2;
+  padding: 5px 20px 190px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.container-delivery{
+  background-color: #f2f2f2;
+  padding: 5px 20px 230px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text],select {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/*Footer styles*/
+footer {
+  text-align: right;
+  padding: 3px;
+  background-color: #292929;
+  color: white;
+  position: fixed;
+  right: 0.5px;
+  bottom: 0;
+  height: 50px;
+}
