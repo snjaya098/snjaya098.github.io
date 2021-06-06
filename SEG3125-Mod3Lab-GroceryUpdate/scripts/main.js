@@ -55,59 +55,59 @@ function prefCustomer() {
 	var z = document.getElementById("Organic").checked;
 	
 	if (w == true) {
-		populateListProductChoices("Lactose-Intolerant",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (x == true) {
-		populateListProductChoices("Nut-Allergy",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Nut-Allergy",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (y == true) {
-		populateListProductChoices("Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (z == true) {
-		populateListProductChoices("Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && x==true) {
-		populateListProductChoices("Lactose-Intolerant & Nut-Allergy",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Nut-Allergy",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && y ==true) {
-		populateListProductChoices("Lactose-Intolerant & Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && z ==true) {
-		populateListProductChoices("Lactose-Intolerant & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if(x == true && y == true) {
-		populateListProductChoices("Nut-Allergy & Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Nut-Allergy & Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if(x == true && z == true) {
-		populateListProductChoices("Nut-Allergy & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Nut-Allergy & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (y == true && z == true) {
-		populateListProductChoices("Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && x == true && y == true) {
-		populateListProductChoices("Lactose-Intolerant & Nut-Allergy & Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Nut-Allergy & Vegan",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && x == true && z == true) {
-		populateListProductChoices("Lactose-Intolerant & Nut-Allergy & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Nut-Allergy & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && y == true && z == true) {
-		populateListProductChoices("Lactose-Intolerant & Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (x == true && y == true && z == true) {
-		populateListProductChoices("Nut-Allergy & Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Nut-Allergy & Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else if (w == true && x == true && y == true && z ==true) {
-		populateListProductChoices("Lactose-Intolerant & Nut-Allergy & Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("Lactose-Intolerant & Nut-Allergy & Vegan & Organic",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 	else {
-		populateListProductChoices("No Preference",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt')
+		populateListProductChoices("No Preference",'displayGrain', 'displayFruit', 'displayDairy', 'displayMeat','displayAlt', 'displayInt', 'displaySnack')
 	}
 }
 
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
-function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, slct7) {
+function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, slct7, slct8) {
     var s1 = slct1; //document.getElementById(slct1);
     var s2 = document.getElementById(slct2);
     var s3 = document.getElementById(slct3);
@@ -115,7 +115,7 @@ function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, sl
     var s5 = document.getElementById(slct5);
     var s6 = document.getElementById(slct6);
     var s7 = document.getElementById(slct7);
-
+    var s8 = document.getElementById(slct8);
 	// s2-s7 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
     s3.innerHTML = "";
@@ -123,7 +123,7 @@ function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, sl
     s5.innerHTML = "";
     s6.innerHTML = "";
     s7.innerHTML = "";
-
+    s8.innerHTML = "";
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1);
 
@@ -197,13 +197,21 @@ function populateListProductChoices(slct1, slct2, slct3, slct4, slct5, slct6, sl
 			s6.appendChild(checkbox);
 			s6.appendChild(label);
 		}
-		else {
+		else if(productName.category === 'international') {
 			s7.appendChild(document.createElement("br"));
 			s7.appendChild(checkbox);
 			s7.appendChild(picture);
 			s7.appendChild(document.createElement("br"));
 			s7.appendChild(checkbox);
 			s7.appendChild(label);
+		}
+		else {
+			s8.appendChild(document.createElement("br"));
+			s8.appendChild(checkbox);
+			s8.appendChild(picture);
+			s8.appendChild(document.createElement("br"));
+			s8.appendChild(checkbox);
+			s8.appendChild(label);
 		}
 	}
 }

@@ -202,6 +202,16 @@ var products = [
 		category: "international"
 	},
 	{
+		name: "Kikkoman Soy Sauce/ \u30ad\u30c3\u30b3\u30fc\u30de\u30f3 (590ml)",
+		lactoseFree: true,
+		nutFree: true,
+		organic: false,
+		vegan: true,
+		price: 5.67,
+		img: "Images/soysauce.jpg",
+		category: "international"
+	},
+	{
 		name: "Shin Ramyun noodles/ \uc2e0\ub77c\uba74 (4 pack)",
 		lactoseFree: true,
 		nutFree: true,
@@ -250,7 +260,57 @@ var products = [
 		price: 3.39,
 		img: "Images/falafel.jpg",
 		category: "international"
-	}
+	},
+	{
+		name: "Doritos (235g)",
+		lactoseFree: true,
+		nutFree: true,
+		organic: false,
+		vegan: true,
+		price: 2.29,
+		img: "Images/doritos.jpg",
+		category: "snack"
+	},
+		{
+		name: "Nutella (725g)",
+		lactoseFree: false,
+		nutFree: false,
+		organic: false,
+		vegan: false,
+		price: 3.43,
+		img: "Images/nutella.jpg",
+		category: "snack"
+	},
+	{
+		name: "Peanut Butter(900g)",
+		lactoseFree: true,
+		nutFree: false,
+		organic: false,
+		vegan: true,
+		price: 2.97,
+		img: "Images/peanutbutter.jpg",
+		category: "snack"
+	},
+	{
+		name: "Chips Ahoy (6 pack)",
+		lactoseFree: false,
+		nutFree: true,
+		organic: false,
+		vegan: false,
+		price: 2.46,
+		img: "Images/cookies.jpg",
+		category: "snack"
+	},
+	{
+		name: "Veggie Chips(142g)",
+		lactoseFree: true,
+		nutFree: true,
+		organic: true,
+		vegan: true,
+		price: 2.70,
+		img: "Images/veggiechips.jpg",
+		category: "snack"
+	},
 ];
 
 // given restrictions provided, make a reduced list of products
