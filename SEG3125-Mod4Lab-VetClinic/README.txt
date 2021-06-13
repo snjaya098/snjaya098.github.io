@@ -16,7 +16,7 @@ https://startbootstrap.com/theme/agency
 Matte, R (2021) SEG3125-Module4-Website [Source code] 
 https://github.com/RyanMatte/Website/tree/master
 
-This website used themes and information insripred from the following sources:
+This website used themes and information inspired from the following sources:
 
 https://www.mcgilvrayvet.com/services
 https://www.senecaanimalclinic.ca/about-us/
