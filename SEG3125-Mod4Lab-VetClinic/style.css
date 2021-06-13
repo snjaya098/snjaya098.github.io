@@ -1,0 +1,177 @@
+<!-- 
+Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab4
+Vet Clinic- style sheet
+
+Created using tutorials/inspiration from sources:
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://www.w3schools.com/html/default.asp 
+https://startbootstrap.com/theme/agency
+Matte, R (2021) SEG3125-Module4-Website [Source code] 
+https://github.com/RyanMatte/Website/tree/master
+-->
+
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*For Smooth Scrolling throughout the site*/
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+/*For the MastHead*/
+header.masthead {
+  padding-top: 17rem;
+  padding-bottom: 12.5rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("Images/dogcat3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  color:black; 
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  color:black; 
+  font-family: "Playfair Display";;
+}
+
+/*For the Navigation Bar*/
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+}
+.navbar-light .navbar-text {
+  color: rgba(0, 0, 0, 1);
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:focus, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #9be5aa;
+}
+
+/*Page Sections*/
+.page-section#about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color:#9be5aa;
+  color: white;
+}
+.page-section#services {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+.page-section#doctors {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color:#9be5aa;
+  color: white;
+}
+.page-section#contact {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+
+}
+
+/*Images and Fonts*/
+img {
+  border-radius: 50%;
+}
+h2{
+font-family:"Playfair Display";
+font-weight:900;
+}
+h4{
+font-family: 'Lora', serif;
+font-weight:700;
+}
+p1{
+font-family: 'Lora', serif;
+font-weight:600;
+font-size:25px;
+}
+
+/*Custom Divider*/
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #9be5aa;
+  border-radius: 1rem;
+  border-color: #9be5aa !important;
+}
+.divider-custom .divider-custom-line2 {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 1rem;
+  border-color: white !important;
+}
+
+/*Buttons*/
+.btn-primary {
+  color: #fff;
+  background-color: #9be5aa;
+  border-color: #9be5aa;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #9be5aa;
+  border-color: #9be5aa;
+}
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #9be5aa;
+  border-color: #9be5aa;
+  box-shadow: 0 0 0 0.2rem #9be5aa;
+}
+
+/*Footer styles*/
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #292929;
+  color: white;
+}
