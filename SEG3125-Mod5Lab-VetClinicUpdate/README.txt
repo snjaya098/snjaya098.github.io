@@ -3,10 +3,13 @@ Student ID: 8786771
 SEG3125 Lab5
 HealthyPaws Vet Clinic Website - Update (Prototype)
 
+**This Lab is a continuation of Lab4: HealthyPaws Vet Clinic. This is meant to act as a prototype/improvement of the site. Not a final copy**
+
 This Folder consists of the following files:
 1) lab5.html: the main page of the Vet Clinic (HealthyPaws Veterinary Clinic)
 2) style_lab5.css: the css file containing all the styles of the website
 3) Images Folder: includes the images used in the website
+4) lab5.js: the javascript file for the website
 
 This website was created using tutorials/inspiration from the following sources:
 
