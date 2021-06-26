@@ -1,0 +1,459 @@
+<!-- 
+Name: S.N.Jayasooriya A.D.
+Student ID: 8786771
+SEG3125 Lab5
+Vet Clinic- html code
+
+Created using tutorials/inspiration from sources:
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://www.w3schools.com/html/default.asp 
+https://startbootstrap.com/theme/agency
+https://mdbootstrap.com/support/jquery/modal-after-validation-form/
+Matte, R (2021) SEG3125-Module4-Website [Source code] 
+https://github.com/RyanMatte/Website/tree/master
+Matte, R (2021) SEG3125-Module5-Lab5_Starter [Source code] 
+https://github.com/RyanMatte/Lab5_Starter
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!-- JQuery UI -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- Personal CSS File-->
+<link href="style_lab5.css" rel="stylesheet" type="text/css">
+<!-- Font Awesome icons (free version)-->     
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google Fonts-->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
+
+<title>HealthyPaws Vet Clinic</title>
+</head>
+
+<!--Begin Page-->
+<body id="page-top">
+
+<!-- This is the masthead of the site-->
+<header class="masthead">
+<div class="container">
+<div class="masthead-heading text-uppercase">Welcome to HealthyPaws</div>
+<div class="masthead-subheading">Quality Care for your Beautiful and Lovable Cats and Dogs</div>
+</div>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+<div class="container">
+<a class="navbar-brand" href="#page-top"><img src="Images/pawprint.png"><strong>HealthyPaws</strong> Veterinary Clinic</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+Menu
+<i class="fas fa-bars ms-1"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+<li class="nav-item"><a class="nav-link" href="#about"><i class="fa fa-info" aria-hidden="true"></i>About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="#services"><i class="fa fa-medkit" aria-hidden="true"></i>Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#doctors"><i class="fa fa-user-md" aria-hidden="true"></i>Doctors</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Covid-19 Alert -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+Due to <strong>COVID-19</strong> we are no longer accepting walk-ins. Please book an appointment online if you would like to visit our clinic. Thank you
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!--About Section-->
+<section class="page-section" id="about">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading text-uppercase"><i class="fa fa-info" aria-hidden="true"></i> About us</h2>
+<!-- Icon Divider-->
+<div class="divider-custom mb-0">
+<div class="divider-custom-line2"></div>
+</div>
+<br>
+<p>Founded in 2016, HealthyPaws is a local veterinary clinic located in Kanata, Ontario</p>
+<p>At HealthyPaws, we make it our mission to provide <strong>quality</strong> medical care and services for your beloved cats and dogs.</p>
+<p>Our team of certified doctors and specialists assure you that we are there for you and your pets whenever you need.</p>
+<img src="Images/puppykitty.jpg">
+</div>
+</div>
+</section>
+
+<!-- Services-->
+<section class="page-section" id="services">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading text-uppercase"><i class="fa fa-medkit" aria-hidden="true"></i> Services</h2>
+<!-- Icon Divider-->
+<div class="divider-custom mb-0">
+<div class="divider-custom-line"></div>
+</div>
+<br>
+<div class="row text-center">
+<div class="col-md-4">
+<h4 class="my-3">Wellness Checkup</h4>
+<img src="Images/wellness.jpg">
+<p class="text-muted">Wellness checkups evaluate your pets overall health, detect problems before they become serious, and keep them on track to live a long, healthy life.</p>
+<p class="text-muted"><strong>Price:</strong> $50</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+Book Appointment
+</button>      
+</div>  
+<div class="col-md-4">
+<h4 class="my-3">Dentistry</h4>
+<img src="Images/teeth.jpg">
+<p class="text-muted">Dental exams and cleanings are essential to protect your pet from many health problems and help them maintain a healthy and clean mouth.</p>
+<p class="text-muted"><strong>Price:</strong> $75</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+Book Appointment
+</button>
+</div>  
+<div class="col-md-4">
+<h4 class="my-3">Nutrition</h4>
+<img src="Images/catfood.jpg">
+<p class="text-muted">Proper diet and nutrition can help your pet fight against disease, maintain proper weight, and promote their overall well-being and help them lead healthy lives.</p>
+<p class="text-muted"><strong>Price:</strong> $65</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+Book Appointment
+</button>      
+</div>
+</div>
+<div class="row text-center">
+<div class="col-md-4">
+<h4 class="my-3">Parasite Control</h4>
+<img src="Images/catitch.jpg">
+<p class="text-muted">Parasites such as fleas and ticks can be very damaging to your pets health. Preventive measures should be taken year round to prevent potential outbreaks.</p>
+<p class="text-muted"><strong>Price:</strong> $40</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+Book Appointment
+</button>      
+</div>
+<div class="col-md-4">
+<h4 class="my-3">Diagnostic Services</h4>
+<img src="Images/diagnostic.jpg">
+<p class="text-muted">We offer a large range of diagnostic services such as endoscopy, allergy detection, ultrasounds and much more to ensure that your pet is healthy all over.</p>
+<p class="text-muted"><strong>Starting Price:</strong> $80</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+Book Appointment
+</button>
+</div>
+<div class="col-md-4">
+<h4 class="my-3">Surgical Services</h4>
+<img src="Images/dogsurgery.jpg">
+<p class="text-muted">We offer a large range of surgical services such as spay and neutering, orthopedic surgery and much more to ensure your pet can live a long and healthy life.</p>
+<p class="text-muted"><strong>Starting Price:</strong> $150</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+Book Appointment
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Book Appointment Modal -->
+
+<div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="appointmentModalLabel">Book an Appointment</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<form novalidate class="needs-validation">
+
+<!--Name of Pet Owner-->
+<div class="form-group">
+<label for="formName"><b>Name</b></label>
+<input class="form-control" id="formName" placeholder="Your Name" autofocus required>
+</div>
+<br>
+
+<!--Phone Number of Pet Owner-->
+<div class="form-group">
+<label for="formPhone" class="tooltipStyle" data-toggle="tooltip" title="Phone Number format should be 123-456-7890"><b><u>Phone</u></b></label>
+<input class="form-control" id="formPhone" type="tel" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" autofocus required>
+</div>
+<br>
+
+<!--Available Doctors-->
+<label for="doctor" data-toggle="tooltip" class="tooltipStyle" title="Please select your preferred veterinarian/specialist depending on your needs">
+<b><u>Doctor </u></b><i class="fa fa-user-md" aria-hidden="true"></i></i></label>
+<div class="form-group">
+<div class="form-check" id="selectDoctor">
+<input class="form-check-input" type="radio" name="doctor" id="michael" value="michael" required>
+<label class="form-check-label" for="michael">Dr. Michael Scott (Head Veterinarian)</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="doctor" id="james" value="james">
+<label class="form-check-label" for="james">Dr. James Bartley (Head Surgeon)</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="doctor" id="michelle" value="michelle">
+<label class="form-check-label" for="michelle">Dr. Michelle Wise (Veterinarian/Nutrition Specialist)</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="doctor" id="angela" value="angela">
+<label class="form-check-label" for="angela">Dr. Angela Colliard (Veterinarian/Dentist)</label>
+</div>
+</div>
+<br>
+
+<!--Booking Details-->
+<div id="bookingDetails">
+
+<!--Date of Appointment-->
+<div class="form-group">
+<label for="formDate"><b>Appointment Date</b></label>
+<input class="form-control" type="text" id="datepicker" autofocus required>
+</div>
+<br>
+<!--Time of Appointment-->
+<div class="form-group">
+<label for="formTime"><b>Appointment Time</b></label>
+<input class="form-control" id="formTime" type="time" autofocus required>
+</div>
+<br>
+
+<!--Credit Card Information-->
+<div class="form-group">
+<label for="formCC" data-toggle="tooltip" class="tooltipStyle" title="Please enter your credit card information in order to reserve your appointment.">
+<b><u>Credit Card Information </u></b><i class="fa fa-credit-card" aria-hidden="true"></i>
+</label>
+<input class="form-control" id="formCC" type="tel" inputmode="numeric" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" autocomplete="cc-number" minlength="13" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" autofocus required>
+Accepted Credit Cards: <i class="fa fa-cc-amex" aria-hidden="true"></i> <i class="fa fa-cc-mastercard" aria-hidden="true"></i> <i class="fa fa-cc-visa" aria-hidden="true"></i> <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+</div>
+<br>
+<div class="form-group">
+<label for="formCCExp"><b>Card Expiry Date</b></label>
+<input type="text" class="form-control" minlength="7" maxlength="7" placeholder="MM/YYYY" pattern="[0-9]{2}/[0-9]{4}" autofocus required>
+</div>
+<br>
+<div class="form-group">
+<label for="formCVV" data-toggle="tooltip" class="tooltipStyle" title="This is the three-digit code on the back of your credit card">
+<b><u>CVV</u></b>
+<i class="fa fa-question-circle"></i>
+</label>
+<input type="text" class="form-control" minlength="3" maxlength="3" autofocus required>
+</div> 
+<br>
+</div>
+
+<!--Selecting type of Pet-->
+<label for="pet" data-toggle="tooltip" class="tooltipStyle" title="Please select your type of pet">
+<b><u>Pet</u></b></label>
+<div class="form-group">
+<div class="form-check" id="selectPet">
+<input class="form-check-input" type="radio" name="pet" id="dog" value="dog" required>
+<label class="form-check-label" for="dog">Dog</label>
+</div>
+<div class="form-check" id="selectPet">
+<input class="form-check-input" type="radio" name="pet" id="cat" value="cat" required>
+<label class="form-check-label" for="cat">Cat</label>
+</div>
+</div>
+<br>
+
+<!--Selecting a Service-->
+<div class="control-group">
+<div class="form-group">
+<label for="formService"><b>Service <i class="fa fa-medkit" aria-hidden="true"></i></b></label>
+<select class="form-control" id="formService">
+<option value="default" hidden selected="selected"><label>Select a service</label></option>
+<option value="short">Wellness Checkup ($50)</option>
+<option value="short">Dentistry ($75)</option>
+<option value="short">Nutrition ($65)</option>
+<option value="short">Parasite Control ($40)</option>
+<option value="short">Diagnostic Services ($80 - starting)</option>
+<option value="short">Surgical Services ($150 - starting)</option>
+</select>
+<p class="help-block text-danger"></p>
+</div>
+</div>
+<br>
+
+<!--Submit Appointment Form-->
+Please click Submit to book appointment, and we will call you for further details!
+<div class="modal-footer">
+<button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#cancelModal">Cancel</button>
+<button type="submit" class="btn btn-success">Submit</button>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--Appointment Confirmed Modal-->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="confirmModalLabel">Appointment Confirmed</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p>Your appointment has been confirmed! We will contact you for further details at least a day prior to your appointment.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!--Appointment Cancelled Modal-->
+<div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="cancelModalLabel">Appointment Cancelled</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p>Your appointment has been cancelled</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!--Doctors-->
+<section class="page-section" id="doctors">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading text-uppercase"><i class="fa fa-user-md" aria-hidden="true"></i> Our Doctors</h2>
+<!-- Icon Divider-->
+<div class="divider-custom mb-0">
+<div class="divider-custom-line2"></div>
+</div>
+<br>
+<div class="row text-center">
+<div class="col-md-4">
+</div>
+<div class="col-md-4">
+<img src="Images/headvet1.jpeg"><br>
+<p1>Dr.Michael Scott</p1>
+<p><strong>Head Veterinarian/Founder</strong></p>
+<p><strong>M.Sc,DVM</strong></p>
+<p>An accomplished veterinarian of 18 years, Dr.Scott opened up HealthyPaws in order to provide your pet the quality care it deserves.</p>
+</div>
+<div class="col-md-4">
+</div>
+</div>
+<div class="row text-center">
+<div class="col-md-4">
+<img src="Images/vetsurgeon1.jpg"><br>
+<p1>Dr.James Bartley</p1>
+<p><strong>Head Surgeon</strong></p>
+<p><strong>M.Sc,DVM</strong></p>
+<p>Dr.Bartley, who has been a veterinarian for 20 years and a veterinary surgeon for 12, is our head surgeon and a leading specialist in his field.</p>
+</div>
+<div class="col-md-4">
+<img src="Images/vet1.jpg"><br>
+<p1>Dr.Michelle Wise</p1>
+<p><strong>Veterinarian/Nutrition Specialist</strong></p>
+<p><strong>B.Sc,DVM</strong></p>
+<p>As our newest addition to our team, Dr.Wise has been a veterinarian for 6 years and has a passion for animals like no other.</p>
+</div>
+<div class="col-md-4">
+<img src="Images/vet2.jpg"><br>
+<p1>Dr.Angela Colliard</p1>
+<p><strong>Veterinarian/Dentist</strong></p>
+<p><strong>M.Sc,DVM</strong></p>
+<p>Our veterinary dentist, Dr.Colliard, has been a veterinarian for 16 years and will ensure your pets health is in tip-top shape.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Us section -->
+<section class="page-section" id="contact">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading text-uppercase"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</h2>
+<!-- Icon Divider-->
+<div class="divider-custom mb-0">
+<div class="divider-custom-line"></div>
+</div>
+<br>
+<div class="row text-center">
+<div class="col-md-4">
+<h4 class="card-text" align="left"><i class="fa fa-map-marker"></i> Address</h4>
+<p align="left">176 Feline Lane</p>
+<p align="left">Kanata, Ontario K2T 8Y6</p>
+<p align="left">Tel: 613-986-PAWS (7297)</p>
+<p align="left">Email: contact@healthypaws.ca</p>
+</div>
+<div class="col-md-4">
+<h4 class="card-text" align="left"><i class="fa fa-clock-o" aria-hidden="true"></i> Hours of Operation</h4>
+<p align="left">Monday to Thursday: 8:00am - 8:00pm</p>
+<p align="left">Friday to Saturday: 10:00am - 4:00pm</p>
+<p align="left">Sunday: Closed</p>
+</div>
+<div class="col-md-4">
+<h4 class="card-text" align="left"><i class="fa fa-comments"></i> Leave Us a Message</h4>
+<div class="form-group" align="left">
+<label for="formName">Name</label>
+<input class="form-control" id="formName" placeholder="John Doe">
+</div>
+<div class="form-group" align="left">
+<label for="formEmail">Email</label>
+<input class="form-control" id="formEmail" placeholder="someone@example.com">
+</div>
+<div class="form-group" align="left">
+<label for="message">Your Message</label>
+<textarea class="form-control" id="message" name="message" placeholder="Your message here"></textarea>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<!-- Footer-->
+<footer>
+<p>Website Designed by: S.N.Jay</p>
+</footer>
+
+</div>
+
+<!-- Javascript and JQuery Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="lab5.js"></script>
+
+<!--Script to check for validity of inputs-->
+<script>
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {event.preventDefault();event.stopPropagation();}
+else {event.preventDefault(); $('#appointmentModal').modal('hide'); $("#confirmModal").modal("show");}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+</script>
+
+</body>
+</html>
