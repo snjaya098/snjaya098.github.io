@@ -9,7 +9,7 @@ This Folder consists of the following files:
 3) style.css: the css file containing all the styles of the website
 4) Scripts Folder: contains the files groceries.js and main.js and are responsible for the functionality of the store website
 5) Images Folder: includes the images used in the website
-6) Bel-Rose Foods Personas: a pdf document detailing the personas this site was designed/developed for
+6) BelRose_Foods_Personas.pdf: a pdf document detailing the personas this site was designed/developed for
 
 
 This website was created using tutorials/inspiration from the following sources:
